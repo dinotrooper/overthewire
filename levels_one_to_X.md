@@ -38,8 +38,7 @@ Not all of the files in the `inhere` directory are text files. Using `file ./-fi
 
 ## Level Six
 
-There were several directories and files to look through. I focused on one of the provided hints, `1033 bytes in size`. 
+There were several directories and files to look through. I focused on one of the provided hints "1033 bytes in size." 
 
-I used the ls command piped into grep to find any files that were 1033 bytes in size; `ls -l -a -R | grep -C 10 -a "1033"`.  I found only one file with that size and it contained the password for the next level.
-
+I used the `ls` command piped into `grep` to find any files that were 1033 bytes in size; `ls -l -a -R | grep -C 10 -a "1033"`.  I found only one file with that size, and it contained the password for the next level.
 
