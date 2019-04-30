@@ -32,5 +32,14 @@ The file is hidden. Using `ls -a` views all hidden files and directories.
 
 `cat .hidden`
 
+## Level Five
+
+Not all of the files in the `inhere` directory are text files. Using `file ./-file0*`, I discovered that `-file07` is a `ASCII text` file while the others were just `data` files. 
+
+## Level Six
+
+There were several directories and files to look through. I focused on one of the provided hints, `1033 bytes in size`. 
+
+I used the ls command piped into grep to find any files that were 1033 bytes in size; `ls -l -a -R | grep -C 10 -a "1033"`.  I found only one file with that size and it contained the password for the next level.
 
 
