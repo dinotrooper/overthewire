@@ -42,3 +42,17 @@ There were several directories and files to look through. I focused on one of th
 
 I used the `ls` command piped into `grep` to find any files that were 1033 bytes in size; `ls -l -a -R | grep -C 10 -a "1033"`.  I found only one file with that size, and it contained the password for the next level.
 
+## Level Seven
+
+The amount of files and directories to search increases dramatically. Thankfully, I can just keep `grep`ing the `ls` output with the provided hints to find file. `ls -l -a -R | grep -a "33" | grep -a "bandit7" | grep -a "bandit6"`
+
+Once the file is found, I can use the `find -name` command to find the path and `cat` the text file. 
+
+## Level Eight
+
+Things are bit a more complicated since the scope of the search is just as large as last time, but you also need to search any file with the name `data.txt`. Thankfully, `grep` is powerful. 
+
+``cat `find / -name "data.txt" |& grep -v "Permission denied"` | grep -a "millionth"``
+
+Luckily, the only file that we have permission to read has the password. 
+
